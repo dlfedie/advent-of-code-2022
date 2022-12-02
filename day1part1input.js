@@ -1,5 +1,5 @@
-const input =
-4601
+const elves =
+`4601
 1583
 2995
 5319
@@ -2251,4 +2251,6 @@ const input =
 6611
 6489
 3794
-6089
+6089`;
+
+module.exports = { elves };
