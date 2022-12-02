@@ -1,34 +1,34 @@
 const input = require("./day1part1input");
 
-const dayOnePartOne = () => {
-  console.log('woo');
+// const dayOnePartOne = () => {
+//   console.log('woo');
 
-  let mainInput = input.elves.split('\n');
+//   let mainInput = input.elves.split('\n');
 
-  function calculateMostElfCalories(puzzleInput) {
-    let highestTotal = 0;
-    let currentTotal = 0;
+//   function calculateMostElfCalories(puzzleInput) {
+//     let highestTotal = 0;
+//     let currentTotal = 0;
 
-    for (let i = 0; i < puzzleInput.length; i++) {
+//     for (let i = 0; i < puzzleInput.length; i++) {
 
-      if (puzzleInput[i] == '') {
-        highestTotal = (currentTotal > highestTotal) ? currentTotal : highestTotal;
-        currentTotal = 0;
-      } else {
-        // console.log('to int: ', Number(puzzleInput[i]));
+//       if (puzzleInput[i] == '') {
+//         highestTotal = (currentTotal > highestTotal) ? currentTotal : highestTotal;
+//         currentTotal = 0;
+//       } else {
+//         // console.log('to int: ', Number(puzzleInput[i]));
 
-        currentTotal = currentTotal + Number(puzzleInput[i]);
-      }
-    }
-    // below is needed to capture final elf's total
-    highestTotal = (currentTotal > highestTotal) ? currentTotal : highestTotal;
+//         currentTotal = currentTotal + Number(puzzleInput[i]);
+//       }
+//     }
+//     // below is needed to capture final elf's total
+//     highestTotal = (currentTotal > highestTotal) ? currentTotal : highestTotal;
 
-    console.log('highest: ', highestTotal);
+//     console.log('highest: ', highestTotal);
 
 
-  }
-  calculateMostElfCalories(mainInput);
-}
+//   }
+//   calculateMostElfCalories(mainInput);
+// }
 
 const dayOnePartTwo = () => {
   console.log('yeah');
@@ -60,12 +60,14 @@ const dayOnePartTwo = () => {
     });
 
     // console.log('sorted: ', descSortedElfTotals);
+    let topTotal = descSortedElfTotals[0];
     let topThreeTotals = descSortedElfTotals[0] + descSortedElfTotals[1] + descSortedElfTotals[2];
+    console.log('top: ', topTotal);
     console.log('top three: ', topThreeTotals);
 
   }
   calculateTopThreeElfCalories(mainInput);
 }
 
-dayOnePartOne();
+// dayOnePartOne();
 dayOnePartTwo();
