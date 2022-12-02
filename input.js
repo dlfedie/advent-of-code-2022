@@ -5,6 +5,8 @@ const elves =
 30
 
 40
-50`;
+50
+
+70`;
 
 module.exports = { elves };
