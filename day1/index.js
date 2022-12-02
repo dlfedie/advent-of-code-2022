@@ -1,4 +1,6 @@
-const input = require("./day1part1input");
+const input = require("./day1input");
+
+// ended up not needing 2 functions, but keeping below to see first attempt
 
 // const dayOnePartOne = () => {
 //   console.log('woo');
