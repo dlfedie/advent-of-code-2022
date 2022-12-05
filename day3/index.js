@@ -85,19 +85,21 @@ const dayThreePartTwo = () => {
   }
 
   const compareRucksacks = (rucksacks) => {
-    let commonLetter = '';
+    // let commonLetter = '';
     let firstRucksack = rucksacks[0];
     let secondRucksack = rucksacks[1];
     let thirdRucksack = rucksacks[2];
-    for (let letter of firstRucksack) {
-      if (secondRucksack.includes(letter) && thirdRucksack.includes(letter)) {
-        commonLetter = letter;
-        break;
-      }
-    }
-    
+    // for (let letter of firstRucksack) {
+    //   if (secondRucksack.includes(letter) && thirdRucksack.includes(letter)) {
+    //     commonLetter = letter;
+    //     break;
+    //   }
+    // }
+      
 
-    // console.log(commonLetter);
+    // below works, too.. not sure which is faster?
+    let commonLetter = ([...firstRucksack].filter(letter => 
+      secondRucksack.includes(letter) && thirdRucksack.includes(letter)).toString());
     return commonLetter;
   }
 
